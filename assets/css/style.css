@@ -1,151 +1,340 @@
-html, body {
-    margin: 0 auto;
+@media (min-width: 450px) {
 
-    display: table;
-    width: 100%;
-    height: 100%;    
+    html, body {
+        display: table;
+        height: 100%;
+        width: 100%;
+        margin-top: 0;
+        margin-bottom: 0; 
+    }
+
+    header {
+        font-family: Arial, Helvetica, sans-serif;
+        width: 100%;
+        display: block;
+        background-color: #fff;
+        margin: 0 auto;
+        border-bottom: 5px #cccccc solid;
+    }
+
+    header::after { /*Clear floats*/
+        content: "";
+        clear: both;
+        display: block;
+    }
+
+    .section {
+        margin: 0;
+        color: #666666;
+        background-color: #4aaaa5;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        text-align: center;
+        line-height: 200%;
+    }
+
+
+    .about {
+        border-bottom: 5px solid #cccccc;
+    }
+
+    .headshot {
+        width: 105px;
+        float: left;
+        margin-right: 10px;
+    }
+
+    #meat {
+        text-align: justify;
+    }
+
+    .navbar { 
+        list-style-type: none;
+        text-align: center;
+    }
+
+    li { /*Dislay links horizontally as a line*/
+        display: inline;
+    }
+
+    /* --------------------------------------------------------Links */
+    a:link, a:visited {
+        text-decoration: none;
+        color: #666666
+    }
+
+    a:hover {
+        background-color: #4aaaa5;
+        color: #fff
+    }
+    /* ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ */
+
+    .container {
+        /* width: 100%; */
+        max-width: 700px;
+        margin: 0 auto;
+        background-color: #fff;   
+    }
+
+    .container::after { /*Clear floats*/
+        overflow: auto;
+        content: "";
+        clear: both;
+        display: block;
+    }
+
+
+    /* ----------------------------------------------------Portfolio Page styling */
+
+    .projectpic {
+        margin: 0 auto;
+        width: 350px;
+        position: relative;
+
+    }
+
+    .caption {
+        width: 100%;
+        position: absolute;
+        text-align: center;
+        bottom: 8px;
+        left: 50%;
+        background-color: #4aaaa5;
+        color: #666666;
+        transform: translate(-50%);
+    }
+    /*------------------------------------------------End Portfolio Page Styling*/
+
+    /*---------------------------------------------------- Footer styling */
+
+    .stickyfoot {
+        padding: 15px;
+        height: auto;
+        clear: both;
+    }
+
+
+    footer {
+        background-color: #666666;
+        border-top: 5px solid #cccccc;
+        display: table-row;
+        height: 1px;
+        clear: both;
+        text-align: center;
+        color: #4aaaa5;
+        width: 100%;
+        height: 50px;
+        line-height: 280%;
+    }
+
+    /* ---------------------------------------------------End foooter styling */
 }
 
-body {
-    background-image: url("../images/what-the-hex.png");
-}
-
-header {
-    font-family: Arial, Helvetica, sans-serif;
-    width: 100%;
-    display: block;
-    background-color: #fff;
-    margin: 0 auto;
-    border-bottom: 5px #cccccc solid;
-}
-
-.pretty {
-    width: 800px;
-    margin: 0 auto;
-}
-
-header::after { /*Clear floats*/
-    /* overflow: auto; */
-    content: "";
-    clear: both;
-    display: block;
-}
-
-.section {
-    width: 250px;
-    margin: 0;
-    height: 70px;
-    color: #666666;
-    background-color: #4aaaa5;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    text-align: center;
-    line-height: 200%;
-    float: left;
-}
 
 
-.about {
-    border-bottom: 5px solid #cccccc;
-}
+@media (min-width: 700px) {
+    html, body {
+        margin: 0 auto;
+        display: table;
+        height: 100%;    
+    }
 
-/* .section {
-    color: #4aaaa5;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    clear: both;
-    padding: 15px 0;
-    border-bottom: #4aaaa5 5px solid;
-} */
+    body {
+        background-image: url("../images/what-the-hex.png");
+    }
 
-.headshot {
-    width: 250px;
-    float: left;
-    margin-right: 10px;
-}
+    .pretty {
+        width: 700px;
+        margin: 0 auto;
+    }
 
-#meat {
-    text-align: justify;
-}
+    .section {
+        width: 250px;
+        height: 70px;
+        float: left;
+    }
 
-.navbar { /*Dislay contact me horizontally as a line*/
-    /* margin: 0 auto; */
-    list-style-type: none;
-    float: right;
-}
+    .headshot {
+        width: 178px;
+    }
 
-li {
-    display: inline;
-}
+    #meat {
+        text-align: justify;
+    }
 
-/* --------------------------------------------------------Links */
-a:link, a:visited {
-    text-decoration: none;
-    color: #666666
-}
+    .navbar { 
+        list-style-type: none;
+        float: right;
+        margin-right: 5px;
+    }
 
-a:hover {
-    background-color: #4aaaa5;
-    color: #fff
-}
-/* ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ */
+    /* ----------------------------------------------------Portfolio Page styling */
 
-.container {
-    /* width: 100%; */
-    max-width: 800px;
-    margin: 0 auto;
-    background-color: #fff;   
-}
+    .projectpic {
+        margin: 15px;
+        float: left;
+    }
 
-.container::after { /*Clear floats*/
-    overflow: auto;
-    content: "";
-    clear: both;
-    display: block;
-}
-
-
-/* ----------------------------------------------------Portfolio Page styling */
-
-.projectpic {
-    margin: 15px;
-    float: left;
-    width: 350px;
-    position: relative;
+    #pic3, #pic5 { 
+        clear: left;
+        /* Clear left on these to stack in twos per homework images.
+        Other idea would be to float all left and narrow their container to
+        a space for two images only. eg. 500px */
+        
+    }
+    /*------------------------------------------------End Portfolio Page Styling*/
 
 }
 
-.caption {
-    width: 100%;
-    position: absolute;
-    text-align: center;
-    bottom: 8px;
-    left: 50%;
-    background-color: #4aaaa5;
-    color: #666666;
-    transform: translate(-50%);
+
+@media (min-width: 800px) {
+
+    html, body {
+        margin: 0 auto;
+        display: table;
+        width: 100%;
+        height: 100%;    
+    }
+
+    body {
+        background-image: url("../images/what-the-hex.png");
+    }
+
+    .pretty {
+        width: 800px;
+        margin: 0 auto;
+    }
+
+    header::after { /*Clear FLoats here */
+        content: "";
+        clear: both;
+        display: block;
+    }
+
+    .section {
+        width: 250px;
+        margin: 0;
+        height: 70px;
+        float: left;
+    }
+
+    .headshot {
+        width: 200px;
+    }
+
+    #meat {
+        text-align: justify;
+    }
+
+    .navbar {
+        margin-right: 5px;
+        list-style-type: none;
+        float: right;
+    }
+
+    .container {
+        /* width: 100%; */
+        max-width: 800px;
+        margin: 0 auto;
+        background-color: #fff;   
+    }
+
+    .container::after { /*Clear floats*/
+        overflow: auto;
+        content: "";
+        clear: both;
+        display: block;
+    }
+
+
+    /* ----------------------------------------------------Portfolio Page styling */
+
+    .projectpic {
+        margin: 15px;
+        float: left;
+        width: 350px;
+        position: relative;
+
+    }
+
+    .caption {
+        width: 100%;
+        position: absolute;
+        text-align: center;
+        bottom: 8px;
+        left: 50%;
+        background-color: #4aaaa5;
+        color: #666666;
+        transform: translate(-50%);
+    }
+
+    #pic3, #pic5 { 
+        clear: left;
+        /* Clear left on these to stack in twos per homework images.
+        Other idea would be to float all left and narrow their container to
+        a space for two images only. eg. 500px */
+        
+    }
+    /*------------------------------------------------End Portfolio Page Styling*/
+
+
+
+
 }
 
- #pic3, #pic5 { 
-    clear: left;
-    /* Clear left on these to stack in twos per homework images.
-       Other idea would be to float all left and narrow their container to
-       a space for two images only. eg. 500px */
-    
+@media (min-width: 1000px) {
+
+    html, body {
+        margin: 0 auto;
+        display: table;
+        width: 100%; 
+    }
+
+    body {
+        background-image: url("../images/what-the-hex.png");
+    }
+
+    .pretty {
+        width: 1000px;
+        margin: 0 auto;
+    }
+
+    .headshot {
+        width: 250px;
+    }
+
+    .container {
+        max-width: 800px;
+    }
+
+    /* ----------------------------------------------------Portfolio Page styling */
+
+    .projectpic {
+        margin: 15px;
+        float: left;
+        width: 350px;
+        position: relative;
+
+    }
+
+    .caption {
+        width: 100%;
+        position: absolute;
+        text-align: center;
+        bottom: 8px;
+        left: 50%;
+        background-color: #4aaaa5;
+        color: #666666;
+        transform: translate(-50%);
+    }
+
+    #pic3, #pic5 { 
+        clear: left;
+        /* Clear left on these to stack in twos per homework images.
+        Other idea would be to float all left and narrow their container to
+        a space for two images only. eg. 500px */
+        
+    }
+    /*------------------------------------------------End Portfolio Page Styling*/
+
 }
-/*------------------------------------------------End Portfolio Page Styling*/
 
-/*---------------------------------------------------- Footer styling */
-
-
-footer {
-    background-color: #666666;
-    border-top: 5px solid #cccccc;
-    display: table-row;
-    clear: left;
-    text-align: center;
-    color: #4aaaa5;
-    width: 100%;
-    height: 50px;
-    line-height: 280%;
-}
-
-/* ---------------------------------------------------End foooter styling */

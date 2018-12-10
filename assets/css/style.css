@@ -135,19 +135,12 @@ a:hover {
 
 /*---------------------------------------------------- Footer styling */
 
-.stickyfoot { /*This is a method that i found on youtube. */
-    padding: 15px;
-    height: auto;
-    clear: both;
-}
-
 
 footer {
     background-color: #666666;
     border-top: 5px solid #cccccc;
     display: table-row;
-    height: 1px;
-    clear: both;
+    clear: left;
     text-align: center;
     color: #4aaaa5;
     width: 100%;
